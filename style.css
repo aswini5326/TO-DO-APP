@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: "Poppins", serif;
+  background:linear-gradient(0deg, rgb(230, 99, 224),rgb(115, 175, 230)); /* Lighter background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  background-color: #fff;
+  width: 380px;
+  height: 650px;
+  border: 3px solid #af7af5; /* Soft green border */
+  border-radius: 12px;
+  padding: 25px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#addNew {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e663e0;  /* Soft green background */
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#addNew:hover {
+  background-color: #73afe6;  /* Darker green when hovered */
+}
+
+.task-form {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #73afe6;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+.task-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.task {
+  border: 2px solid #af7af5;  /* Soft green border */
+  background-color: #f0f7f3;  /* Light background for tasks */
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.task:hover {
+  transform: scale(1.02);  /* Slight zoom on hover */
+}
+
+.task.completed {
+  background-color: #cdb9e7;  /* Light green background for completed tasks */
+}
+
+.task.completed .task-title,
+.task.completed .task-date,
+.task.completed .task-desc {
+  text-decoration: line-through;
+  color: #888;  /* Grey color for completed tasks */
+}
+
+.task .task-title,
+.task .task-date,
+.task .task-desc {
+  color: #333;
+  font-size: 14px;
+}
+
+.task .task-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.task .task-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.task .task-actions .edit {
+  color: #007bff; /* Blue color for edit */
+}
+
+.task .task-actions .edit:hover {
+  background-color: #bed9f1; /* Light blue background when hovered */
+}
+
+.task .task-actions .delete {
+  color: #e2293c; /* Red color for delete */
+}
+
+.task .task-actions .delete:hover {
+  background-color: #f9d1d1; /* Light red background when hovered */
+}
+
+.task .task-actions input[type="checkbox"] {
+  cursor: pointer;
+}
+

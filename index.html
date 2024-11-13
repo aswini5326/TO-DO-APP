@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <h4 class="mb-3">TODO App</h4>
+
+    <div id="addNew" onclick="openForm()">
+      <span>Add New Task</span>
+      <i class="fas fa-plus"></i>
+    </div>
+
+    <!-- Task Form -->
+    <form id="taskForm" class="task-form">
+      <label>Task Title</label>
+      <input type="text" id="textInput" placeholder="Enter task title" required>
+      <label>Due Date</label>
+      <input type="date" id="dateInput" required>
+      <label>Description</label>
+      <textarea id="textarea" placeholder="Enter task description"></textarea>
+      <button type="submit" id="add">Add Task</button>
+      <button type="button" onclick="closeForm()">Cancel</button>
+    </form>
+
+    <h5 class="text-center my-3">Tasks</h5>
+    <div id="tasks"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
